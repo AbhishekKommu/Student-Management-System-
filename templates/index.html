@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Student Management System</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Student Management System</h1>
+
+
+        <!-- Add Student -->
+
+        <div class="form-box">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="age"
+                    placeholder="Age"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="course"
+                    placeholder="Course"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- Student List -->
+
+        <div class="list-box">
+
+            <h2>Students</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Course</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentList">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script
+        src="{{ url_for('static', filename='script.js') }}">
+    </script>
+
+</body>
+
+</html>
